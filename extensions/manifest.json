@@ -1,0 +1,26 @@
+{
+  "manifest_version": 2,
+
+  "name": "Revvsales Plugin",
+  "description": "Add your .docx documents to Revvsales on just a click",
+  "version": "1.0",
+  "icons": {
+    "16": "Logo-icon.png",
+    "48": "Logo-icon.png"
+  },
+  "browser_action": {
+   "default_icon": "Logo-icon.png",
+   "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "<all_urls>"
+      ],
+      "js": ["content.js"]
+    }
+  ], 
+  "permissions": [
+   "activeTab"
+   ]
+}
